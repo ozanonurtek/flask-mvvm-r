@@ -12,6 +12,7 @@
 - Tested with python 3.5 or upper
 - pip3
 - virtualenv
+- your favorite, sqlalchemy supported db
 
 ### Setup
 
@@ -20,3 +21,4 @@
 - after that ```pip install -r requirements.txt``` 
 - finally up the gunicorn ```gunicorn --bind 127.0.0.1:5000 runserver:app```
 - That's it now go to: (http://127.0.0.1:5000)
+- don't forget to edit config.py
