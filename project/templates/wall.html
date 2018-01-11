@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/wall.css') }}">
+{% endblock %}
+{% block content %}
+    {% block flasher %}
+        {{ super() }}
+    {% endblock %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2>Aktivite Duvarı</h2>
+                    <div class="activity-feed">
+
+                    {% for event in events %}
+
+                        <div class="feed-item">
+                            <div class="text">{{ event.user.username }} isimli üye {{ event.date }} tarihi için yer ayırttı.</a>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

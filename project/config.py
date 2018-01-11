@@ -1,0 +1,11 @@
+# debug configurations
+DEBUG = True
+SECRET_KEY = "your_secret_key"
+SERVER_NAME = "127.0.0.1:5000"
+TEMPLATES_AUTO_RELOAD = True
+SQLALCHEMY_DATABASE_URI = "postgresql://<username>:<password>@localhost:<postgres_port>/<db_name>"
+SQLALCHEMY_ECHO = True
+SQLALCHEMY_TRACK_MODIFICATIONS = True
+DATABASE_URL = SQLALCHEMY_DATABASE_URI
+RECAPTCHA_PUBLIC_KEY = "recaptcha_public_key"
+RECAPTCHA_PRIVATE_KEY = "recaptcha_private_key"

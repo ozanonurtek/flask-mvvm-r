@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='css/mystyle.css')}}">
+<link rel="stylesheet" href="{{ url_for('.static', filename='css/bootstrap-datetimepicker.min.css') }}">
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                {% block flasher %}
+                    {{ super() }}
+                {% endblock %}
+                <form action="{{ url_for('login') }}" method="POST">
+                    {{ form.csrf_token }}
+
+                    <div class="form-group-lg">
+                        <div class="form-group">
+                           <label for="username_input"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Kullanıcı Adı </label>
+                            {{ form.username(class_="form-control", placeholder="Kullanıcı Adı") }}
+
+                        </div>
+                        <div class="form-group">
+                           <label for="password_input"><span class="glyphicon glyphicon-lock"></span> Şifre </label>
+                            {{ form.password(class_="form-control", placeholder="Şifre") }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.recaptcha }}
+                        </div>
+                        <button type="submit" class="btn-block btn-success active"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Giriş Yap</button>
+
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
