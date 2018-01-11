@@ -1,5 +1,5 @@
 # flask-mvvm-r
-### MVVM-R(Model-View-ViewModel-Router) patern for scalable flask applications 
+### MVVM-R(Model-View-ViewModel-Router) pattern for scalable flask applications 
 #### This project uses following flask tool-kits:
 - Flask-WTF(for secure forms)
 - Flask-Login(for seure sessions)
