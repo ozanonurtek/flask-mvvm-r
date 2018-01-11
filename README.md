@@ -4,6 +4,7 @@
 - Flask-WTF(for secure forms)
 - Flask-Login(for seure sessions)
 - Flask-SQLAlchemy(for db integration)
+- Flask-Bootstrap(beautify)
 
 ## How to run
 
